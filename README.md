@@ -1,2 +1,2 @@
-# react-native-practise-app
-practise app build with react-native and expo
+# practise-reactnative-app-js
+practise reactnative-app  with java script
