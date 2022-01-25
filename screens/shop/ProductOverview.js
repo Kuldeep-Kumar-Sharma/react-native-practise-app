@@ -9,7 +9,12 @@ const ProductOverview = (props) => {
     <FlatList
       data={products}
       keyExtractor={(item) => item.id}
-      renderItem={(itemData) => <ProductItem image={item.data.imageUrl} price={item.data.title} title={item.data.title} onAddToCart={ }/>}
+      renderItem={(itemData) =>
+        <ProductItem image={item.data.imageUrl} price={item.data.title} title={item.data.title} onAddToCart={ } onViewDetails={() => {
+          props.navigation.navigate({ routeName: 'ProductDetail' }, {
+            productId: itemData.item.id,
+          productTitle: itemData.item.title});
+        } }/>}
     />
   );
 };
